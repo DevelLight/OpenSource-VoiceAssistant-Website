@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/style.css">
+     <link rel="stylesheet" href="../css/setup.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!--Navbar-->
+<header class="cd-header">
+  <div class="header-wrapper">
+      <div class="logo-wrap">
+         <a href="../index.html"> Voiceassistent</a>
+      </div>
+      <div class="nav-but-wrap">
+          <div class="menu-icon hover-target">
+              <span  class="menu-icon__line menu-icon__line-left"></span>
+              <span  class="menu-icon__line"></span>
+              <span  class="menu-icon__line menu-icon__line-right"></span>
+          </div>
+      </div>
+  </div>
+</header>
+
+<div class="nav" style="top:0;">
+  <div class="nav__content">
+      <ul class="nav__list">
+          <li class="nav__list-item active-nav"><a href="../index.html#home" target="_blank" class="hover-target">home</a></li>
+          <li class="nav__list-item"><a href="../index.html#info" target="_blank" class="hover-target">Info</a></li>
+          <li class="nav__list-item"><a href="../index.html#download" target="_blank" class="hover-target">Download</a></li>
+          <li class="nav__list-item"><a href="../index.html#news" target="_blank" class="hover-target">News</a></li>
+          <li class="nav__list-item"><a href="#" target="_blank" class="hover-target">Guide</a></li>
+      </ul>
+  </div>
+</div>
+
+
+
+<section id="setup" class="setup">
+   
+      
+      <h1 class="hidden">VoiceAssistant - Setup Guide</h1>
+    <br>
+    <br>
+    <br>
+      <!-- INTRO -->
+      <h2 class="hidden">What is Javi?</h2>
+      
+      <p class="hidden">A multifunction and fully offline usable open-source voice assistant written in Java.</p>
+    
+      <h2 class="hidden">Features</h2>
+        
+      <p class="hidden">Completely customizable by writing your own plugins and ovlerlay with many function . </p>
+      
+      <!-- Note -->
+      <div class="message message-important hidden">
+        <div class="message-image hidden"> 
+          <img class="message-image-inline hidden">
+        </div>
+        <div class="message-body hidden"> 
+          <div class="message-title hidden">Important</div>
+          <p class="import hidden">Support only Linux and Mac. We are not support Windows!</p>
+        </div>
+       </div>
+
+
+       <h3 class="hidden">Used libraries in this Project:</h3>
+         <ul>
+         <li><mark class="hidden">MaryTTS (Text-To-Speech)</mark></li>
+         <li><mark class="hidden">Vosk (speech recognizer)</mark></li>
+         <li><mark class="hidden">QT / QT Jambi (just the simple Text-Overlay)</mark></li>
+         <li><mark class="hidden">java-discord-rpc (Discord RPC)</mark></li>
+         <li><mark class="hidden">dbus java for communicating with MPRIS</mark></li>
+            </ul>
+      
+      <!-- HEADINGS -->
+
+      <dl class="hidden">
+        <h1 class="hidden">Building and Running</h1>
+
+        <h3 class="hidden">Requirements to run fully:</h3>
+        <ul>
+        <li><mark class="hidden">a PC based on x86_64 (amd64) with a Linux installation or MacOS</mark></li>
+        <li><mark class="hidden">Java (version 18 recommended)</mark></li>
+        <li><mark class="hidden">QT 6</mark></li>
+        <li><mark class="hidden"Maven (mvn on command line)</mark></li>
+        <li><mark class="hidden">Git (optional, only for downloading)</mark></li>
+        </ul>
+
+        <h3 class="hidden">Requirements to run (only basic funtionality):</h3>
+        <ul>
+        <li><mark class="hidden">any x86_64 PC OS doesn't matter</mark></li>
+        <li><mark class="hidden">Java</mark></li>
+        <li><mark class="hidden">Git (optional, only for downloading)</mark></li>
+        <li><mark class="hidden">java-discord-rpc (Discord RPC)</mark></li>
+        <li><mark class="hidden">dbus java for communicating with MPRIS</mark></li>
+        </ul>
+
+        <dt class="hidden">Running standalone:</dt>
+        <br>
+        <dd class="hidden">1.Clone the repository:<br>
+            <br>
+            <kbd class="hidden"> git clone https://github.com/TheRedstoneDEV-DE/VoiceAssistant </kbd> <br>
+            <br>
+            and get the voice model for vosk from (the small one is recommended) VOSK Models unzip it, rename the folder inside it to 'model' and put it into the project root
+        </dd>
+        <br>
+        <dd class="hidden" >
+            2.Build:<br>
+            <br>
+            <kbd class="hidden"> mvn install </kbd>
+        </dd>
+        <br>
+        <dd class="hidden">
+            3.Run the Jar file, which was generated in the 'target' folder after copieng it into the project root:<br>
+            <br>
+            <kbd class="hidden"> java -jar [JARFILE] </kbd>
+        </dd>
+        <br>
+        <dd class="hidden">
+            4.Configure via setup window:<br>
+            The fields in the window should be selfexplaining:
+            <br>
+            <ul>
+                <li class="hidden">'Overlay position' definines the coordinates for the overlay (should only be necessary, if you have multiple screens)</li>
+                <li class="hidden">'CPU temp file' defines the file, in which the cpu temperature is logged by the kernel (if you don't have the overlay enabled, this is not used at all)</li>
+                <li class="hidden">any MPRIS settings are just defining, which player you are targeting in the dbus interface (you can start, pause and skip titles with voicecommands)</li>
+            </ul>
+        </dd>
+      </dl>
+      <br>
+      <dt class="hidden">Running with recognition server:</dt>
+      <br>
+      <dd class="hidden">1.Clone the repository:<br>
+        <br>
+          <kbd class="hidden"> git clone https://github.com/TheRedstoneDEV-DE/VoiceAssistant </kbd> <br>
+          <br>
+          and get the voice model for vosk from (the small one is recommended) VOSK Models unzip it, rename the folder inside it to 'model' and put it into the project root on the server.
+      </dd>
+      <br>
+      <dd class="hidden">
+          2.Build:<br>
+          <br>
+          <kbd class="hidden"> mvn install </kbd>
+      </dd>
+      <br>
+      <dd class="hidden">
+          3.Copy the Jar file from the 'target' folder in the project root and run the client standalone for setup:<br>
+          <br>
+          <kbd class="hidden"> java -jar [JARFILE] </kbd>
+      </dd>
+      <br>
+      <dd class="hidden">
+          4.Copy the built jar from the target folder, the 'model' folder and the 'keys' folder to the server <br>
+          <br>
+           device (here it really could be Windows and should'n affect anything)<br>
+      </dd>
+      <br>
+      <dd class="hidden">
+        5.Generate the Keystore and Truststore for Client and Server on the Server. To do that, go into the 'keys' folder and execute the bash file. 
+        <br> Next you will be asked some questions, because of the certificate and a password for the key (you should remember it, because you need <br> 
+        it when running)<br>
+        <br>
+        <kbd class="hidden"> bash genkeys.sh </kbd>
+    </dd>
+    <br>
+    <dd class="hidden">
+        6.Move the 'client-trust.jks' from the 'keys' folder of the server to the 'keys' folder of the client
+    </dd>
+    <dd class="hidden">
+        7.Run! First run the server: <br>
+        <br>
+      <kbd class="hidden">  KEY_PASSPHRASE=[Password of the Keystore] java -jar [JARFILE] --server </kbd> <br>
+      <br>
+        Then the client (you could even use multiple with one server): <br>
+        <br>
+
+        <kbd class="hidden"> KEY_PASSPHRASE=[password of the Truststore] java -jar [JARFILE] <br> --client [server IP address] </kbd>
+    </dd>
+    </dl>
+
+    <h3 class="hidden">List of commands</h3>
+
+      <table class="hidden">
+        <thead class="hidden">
+          <tr class="hidden">
+            <th class="hidden">command</th>
+            <th class="hidden">short explanation</th>
+          </tr>
+        </thead>
+        <tbody class="hidden">
+          <tr class="hidden">
+            <td class="hidden">hey computer</td>
+            <td class="hidden">just the base command, has to be said, before any other voice command</td>
+          </tr>
+          <tr class="hidden">
+            <td class="hidden">set volume to [number between 10-90] percent</td>
+            <td class="hidden">sets the volume of the main audio output via mixer</td>
+          </tr class="hidden">
+          <tr class="hidden">
+            <td class="hidden">open [application name]</td>
+            <td class="hidden">opens the named application in another "screen"</td>
+          </tr class="hidden">
+          <tr class="hidden">
+            <td class="hidden">reconfigure</td>
+            <td class="hidden">opens the setup ui again (in case you missconfigured something)</td>
+          </tr>
+          <tr class="hidden">
+            <td class="hidden">reconfigure programs</td>
+            <td class="hidden">opens the setup ui for adding programs to the open [application name] command</td>
+          </tr>
+          <tr class="hidden">
+            <td class="hidden">[hide/show] overlay</td>
+            <td class="hidden">hides or shows the overlay</td>
+          </tr>
+          <tr class="hidden">
+            <td class="hidden">pause / resume / next / previous</td>
+            <td class="hidden">plays/pauses a mediaplayer, skippes one title forward/backward</td>
+          </tr class="hidden">
+        </tbody>
+      </table>
+
+    <h3 class="hidden">List of Environment variables</h3>
+
+    <table class="hidden">
+      <thead class="hidden">
+        <tr class="hidden">
+          <th class="hidden">env variable</th>
+          <th class="hidden">explanation</th>
+        </tr>
+      </thead>
+      <tbody class="hidden"> 
+        <tr class="hidden">
+          <td class="hidden"><kbd class="hidden"> OUTPUT_GAIN </kbd></td>
+          <td class="hidden">adjusts the output volume of the tts system (in case you are using it with some audio server like alsa)</td>
+        </tr>
+        <tr class="hidden">
+          <td class="hidden"><kbd class="hidden">AUDIODEV</kbd></td>
+          <td class="hidden">sets the audio device for input and ouput, but only if it is supported, if it is not supported the voice assistant won't have any audio</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="message message-important hidden">
+        <div class="message-image hidden"> 
+          <img class="message-image-inline">
+        </div>
+        <div class="message-body hidden"> 
+          <div class="message-title">This is still Work-In-Progress Software!</div>
+          <p class="import">Please inform me about bugs you have found via the issues!</p>
+        </div>
+       </div>
+</section>
+
+
+<footer class="footer-distributed">
+
+  <div class="footer-right">
+    <a href="https://github.com/TheRedstoneDEV-DE/VoiceAssistant"><i class="fa fa-github"></i></a>
+
+  </div>
+
+  <div class="footer-left">
+
+    <p class="footer-links">
+      <a class="link-1" href="#home">Home</a>
+
+      <a href="#info">Info</a>
+
+      <a href="#download">Download</a>
+       
+      <a href="#">Guide</a>
+
+      <a href="#news">News</a>
+
+    </p>
+
+    <p>DevelLight Studio &copy; 2023</p>
+
+  </div>
+
+</footer>
+
+<script src="../js/setup.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://kit.fontawesome.com/0d0ca0fcb6.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="../js/Navbar.js"></script>
+</body>
+</html>
