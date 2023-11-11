@@ -46,7 +46,7 @@
 
             //Navigation
 
-            	var app = function () {
+            	var app = (function () {
             		var body = undefined;
             		var menu = undefined;
             		var menuItems = undefined;
@@ -65,7 +65,7 @@
             			if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
             		};
             		init();
-            	}();
+            	}());
 
             /* Hero Case study images */
 
